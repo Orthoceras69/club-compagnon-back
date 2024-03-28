@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import clubModel from './Clubs';
 const { Schema } = mongoose;
 
 
@@ -8,8 +9,8 @@ const userSchema = new Schema({
     email: { type:String,  required:'un email est obligatoire :)', unique:true },
     password:{ type:String },
     admin: Boolean,
-    skills:[Schema.Types.Mixed],
-    refreshToken:String
+    refreshToken:String,
+    clubs: [{type:clubModel}],
 },
 { timestamps: true }
 );
