@@ -6,7 +6,7 @@ const skillSchema = new Schema({
     name: String,
     difficulty: Number,
     comment: String,
-    level: Number,
+    level: Number
 },
 { timestamps: true }
 );

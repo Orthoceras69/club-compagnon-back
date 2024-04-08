@@ -1,11 +1,10 @@
 import mongoose from 'mongoose';
-import moduleModel from './Modules';
 const { Schema } = mongoose;
 
 
 const groupSchema = new Schema({
     name: String,
-    modules: [{type:moduleModel}],
+    modules: [Schema.Types.mixed]
 },
 { timestamps: true }
 );

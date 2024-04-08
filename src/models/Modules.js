@@ -4,7 +4,7 @@ const { Schema } = mongoose;
 
 const moduleSchema = new Schema({
     name: String,
-    skills: [{type:skillModel}],
+    skills: [Schema.Types.mixed]
 },
 { timestamps: true }
 );
